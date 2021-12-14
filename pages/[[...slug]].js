@@ -35,7 +35,8 @@ export async function getStaticProps({
   let sbParams = {
     version: "draft", // or "published"
     resolve_relations: [
-      "teaser",
+      "text",
+      "teaser.headline",
       "featured-posts.posts",
       "selected-posts.posts",
     ],

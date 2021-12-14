@@ -19,7 +19,12 @@ export function useStoryblok(originalStory, preview, locale) {
     if (typeof StoryblokBridge !== "undefined") {
       // initialize the bridge with your token
       const storyblokInstance = new StoryblokBridge({
-        resolveRelations: ["featured-posts.posts", "selected-posts.posts"],
+        resolveRelations: [
+          "text",
+          "teaser.headline",
+          "featured-posts.posts",
+          "selected-posts.posts",
+        ],
         language: locale,
       });
 
@@ -30,7 +35,9 @@ export function useStoryblok(originalStory, preview, locale) {
 
       // live update the story on input events
       storyblokInstance.on("input", (event) => {
+        console.log("input");
         if (story && event.story._uid === story._uid) {
+          console.log(story);
           setStory(event.story);
         }
       });
