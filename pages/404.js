@@ -9,6 +9,8 @@ export default function Page404({ preview, locale, locales, defaultLocale }) {
   // const enableBridge = preview; // load only inside preview mode
   const storyLoaded = useStoryblok(null, enableBridge, locale);
 
+  console.log({ storyLoaded });
+
   let content = <h1>Not found</h1>;
 
   if (storyLoaded && storyLoaded.content)

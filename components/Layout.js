@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 
 const Layout = ({ children, locale, locales, defaultLocale }) => (
   <>
@@ -19,7 +17,6 @@ gtag('js', new Date());
 gtag('config', 'UA-214983354-1');`,
         }}
       ></script>
-
       <script
         async
         src="https://www.googleoptimize.com/optimize.js?id=OPT-T9CBT3Z"

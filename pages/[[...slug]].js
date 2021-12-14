@@ -16,6 +16,8 @@ export default function Page({
   // const enableBridge = preview;
   story = useStoryblok(story, enableBridge, locale);
 
+  console.log({ story });
+
   return (
     <Layout locale={locale} locales={locales} defaultLocale={defaultLocale}>
       <DynamicComponent blok={story.content} />
@@ -34,12 +36,7 @@ export async function getStaticProps({
 
   let sbParams = {
     version: "draft", // or "published"
-    resolve_relations: [
-      "text",
-      "teaser.headline",
-      "featured-posts.posts",
-      "selected-posts.posts",
-    ],
+    resolve_relations: ["headline", "text"],
     language: locale,
   };
 
