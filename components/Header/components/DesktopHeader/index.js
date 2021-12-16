@@ -11,7 +11,6 @@ import TwitterLogo from "../../assets/twitter-logo.inline.svg";
 import GitHubLogo from "../../assets/github-logo.inline.svg";
 import SlackLogo from "../../assets/slack-logo.inline.svg";
 import * as S from "./styled";
-import link from "next/link";
 
 const DesktopHeader = ({
   theme,

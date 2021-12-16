@@ -7,20 +7,16 @@ const useHighlighter = () => {
   const [highlighter, setHighlighter] = useState(null);
 
   useEffect(() => {
-    console.log("use effect");
-
     (async () => {
-      console.log("getting");
-
       const newHighlighter = await shiki.getHighlighter({
         theme: "/code-theme",
-        langs: [
-          {
-            id: `dsl`,
-            scopeName: `source.dashaScriptingLanguage`,
-            grammar: dslGrammar,
-          },
-        ],
+        // langs: [
+        //   {
+        //     id: `dsl`,
+        //     scopeName: `source.dashaScriptingLanguage`,
+        //     grammar: dslGrammar,
+        //   },
+        // ],
       });
 
       console.log({ newHighlighter });

@@ -11,14 +11,18 @@ import {
 } from "./subFooterWrapper";
 import Col from "./components/Col";
 import { AHref } from "./Copyright";
-import { Container, InnerContainer, Caption } from "./components/Col/styled";
+import {
+  Container,
+  InnerContainer,
+  Caption,
+  Link,
+} from "./components/Col/styled";
 import * as S from "./styled";
 import TwitterIcon from "../Header/assets/twitter-logo.inline.svg";
 import GitHubIcon from "../Header/assets/github-logo.inline.svg";
 import SlackIcon from "../Header/assets/slack-logo.inline.svg";
 import SkolkovoLogo from "./assets/skolkovo.inline.svg";
 import Button from "../Button";
-import { Link } from "./components/Col/styled";
 
 const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
   return (

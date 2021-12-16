@@ -1,25 +1,27 @@
-export const addLineNumbers = block => {
-  const codeEl = block.children.length > 0 ? block.children[0] : null
+export const addLineNumbers = (block) => {
+  const codeEl = block.children;
 
   if (!codeEl) {
-    return block
+    return block;
   }
 
-  const tableEl = document.createElement("table")
-  tableEl.classList.add("code-block")
+  const tableEl = document.createElement("table");
+  tableEl.classList.add("code-block");
 
-  Array.from(codeEl.children).forEach((line, i) => {
-    const trEl = document.createElement("tr")
-    const numberCell = document.createElement("td")
-    const codeCell = document.createElement("td")
+  Array.from(codeEl).forEach((line, i, arr) => {
+    if (i === arr.length - 1 && !line.textContent) return;
 
-    numberCell.textContent = i + 1
-    codeCell.append(line)
-    trEl.appendChild(numberCell)
-    trEl.appendChild(codeCell)
+    const trEl = document.createElement("tr");
+    const numberCell = document.createElement("td");
+    const codeCell = document.createElement("td");
 
-    tableEl.appendChild(trEl)
-  })
+    numberCell.textContent = i + 1;
+    codeCell.append(line);
+    trEl.appendChild(numberCell);
+    trEl.appendChild(codeCell);
 
-  return tableEl
-}
+    tableEl.appendChild(trEl);
+  });
+
+  return tableEl;
+};

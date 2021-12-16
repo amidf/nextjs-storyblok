@@ -22,7 +22,7 @@ const Header = ({ content, theme, openModal = () => {}, changeTheme }) => {
   return (
     <S.Container id="header">
       {isMobile ? (
-        <MobileHeader {...headerProps} footerContent={content.footer} />
+        <MobileHeader {...headerProps} footerContent={content} />
       ) : (
         <DesktopHeader {...headerProps} />
       )}

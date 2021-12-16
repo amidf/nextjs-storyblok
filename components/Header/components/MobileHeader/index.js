@@ -91,7 +91,7 @@ const MobileHeader = ({
               </S.Link>
             ) : (
               <Link href={item.link} passHref>
-                <S.InnerLink>{item.label}</S.InnerLink>
+                <a>{item.label}</a>
               </Link>
             )
           )}
