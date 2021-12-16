@@ -57,7 +57,7 @@ export const mdOptions = (highlighter) => ({
   img: ({ src, title, alt }) => {
     return (
       <S.Asset>
-        <Image width="100%" height="100%" src={src} alt={title} />
+        <img src={src} alt={title} />
         <figcaption>{title}</figcaption>
       </S.Asset>
     );

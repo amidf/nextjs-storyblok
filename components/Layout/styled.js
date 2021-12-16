@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     min-width: 320px;
+    overflow-x: hidden;
     margin: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -28,10 +29,11 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
 
     #__next {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
     }
   }
 

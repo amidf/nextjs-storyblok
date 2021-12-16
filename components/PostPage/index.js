@@ -7,17 +7,15 @@ import Image from "next/image";
 
 import Layout from "../Layout";
 import Introduction from "./components/Introduction";
-import Content, { mdOptions } from "./components/Content";
+import Content from "./components/Content";
 import ShareButtons from "./components/ShareButtons";
 import * as S from "./styled";
-import CodeBlock from "./components/CodeBlock";
 import { sbEditable } from "@storyblok/storyblok-editable";
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
+  align-items: center;
 
   main {
     margin-top: 64px;
@@ -69,9 +67,7 @@ const PostPage = ({ blok }) => {
             <h1>{blok.title}</h1>
             <div className="post-info-container">
               {blok.authorPhoto && (
-                <Image
-                  width={64}
-                  height={64}
+                <img
                   alt={blok.authorPhoto.alt}
                   src={blok.authorPhoto.filename}
                 />
@@ -94,9 +90,7 @@ const PostPage = ({ blok }) => {
           <S.ThumnailBox>
             <figure>
               {blok.frontImage && (
-                <Image
-                  width="100%"
-                  height="100%"
+                <img
                   ref={thumbnailEl}
                   alt={blok.frontImage.alt}
                   src={blok.frontImage.filename}

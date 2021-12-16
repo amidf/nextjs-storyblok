@@ -17,7 +17,7 @@
     "links": [
       { "label": "Documentation", "link": "https://docs.dasha.ai" },
       { "label": "Playground", "link": "https://playground.dasha.ai/" },
-      { "label": "Blog", "link": "/en-us/blog" }
+      { "label": "Blog", "link": "https://dasha.ai/en-us/blog" }
     ],
     "searchDocs": "Search docs",
     "twitterLink": "https://twitter.com/DashaAI_/",

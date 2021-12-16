@@ -9,7 +9,7 @@ import {
 
 export const Container = styled.header`
   width: 100%;
-  height: ${DESKTOP_HEADER_HEIGHT}px;
+  min-height: ${DESKTOP_HEADER_HEIGHT}px;
   position: sticky;
   top: 0;
   border-bottom: 1px solid ${(props) => props.theme.headerBorder};

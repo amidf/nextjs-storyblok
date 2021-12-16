@@ -53,11 +53,11 @@ const MobileHeader = ({
     if (isMenuOpen) {
       headerEl.style.width = `calc(100% - ${scrollWidth}px)`;
       document.body.style.paddingRight = `${scrollWidth}px`;
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
       headerEl.style.width = "100%";
       document.body.style.paddingRight = "0";
-      document.body.style.overflow = "visible";
+      document.body.style.overflowY = "visible";
     }
 
     return () => {
