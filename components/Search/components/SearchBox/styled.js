@@ -1,36 +1,36 @@
-import styled, { css } from "styled-components"
+import styled, { css } from "styled-components";
 
 import {
   FONT,
   MOBILE_HEADER_HEIGHT,
   EXTRA_MOBILE_HEADER_HEIGHT,
-} from "src/developers/constants"
+} from "../../../../constants";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: ${props => (props.$isFocused ? "100%" : "fit-content")};
+  width: ${(props) => (props.$isFocused ? "100%" : "fit-content")};
   margin-right: 24px;
 
   input {
     ::-webkit-input-placeholder {
-      color: ${props =>
+      color: ${(props) =>
         props.$isFocused
           ? props.theme.searchPlaceholderActive
           : props.theme.searchPlaceholder};
     }
 
     ::-ms-input-placeholder {
-      color: ${props =>
+      color: ${(props) =>
         props.$isFocused
           ? props.theme.searchPlaceholderActive
           : props.theme.searchPlaceholder};
     }
 
     ::placeholder {
-      color: ${props =>
+      color: ${(props) =>
         props.$isFocused
           ? props.theme.searchPlaceholderActive
           : props.theme.searchPlaceholder};
@@ -40,22 +40,22 @@ export const Container = styled.div`
   :hover {
     input {
       ::-webkit-input-placeholder {
-        color: ${props => !props.$isFocused && props.theme.text};
+        color: ${(props) => !props.$isFocused && props.theme.text};
       }
 
       ::-ms-input-placeholder {
-        color: ${props => !props.$isFocused && props.theme.text};
+        color: ${(props) => !props.$isFocused && props.theme.text};
       }
 
       ::placeholder {
-        color: ${props => !props.$isFocused && props.theme.text};
+        color: ${(props) => !props.$isFocused && props.theme.text};
       }
     }
 
     .shortcut-icon {
       svg {
         path {
-          fill: ${props => !props.$isFocused && props.theme.text};
+          fill: ${(props) => !props.$isFocused && props.theme.text};
           fill-opacity: 1;
         }
       }
@@ -85,40 +85,40 @@ export const Container = styled.div`
     .reset-icon {
       path {
         transition: 0.3s;
-        fill: ${props => props.theme.text};
+        fill: ${(props) => props.theme.text};
       }
 
       :hover {
         path {
-          fill: ${props => props.theme.socLinkHover};
+          fill: ${(props) => props.theme.socLinkHover};
         }
       }
     }
 
     .search-icon {
       margin-right: 8px;
-      display: ${props => (props.$isFocused ? "none" : "block")};
+      display: ${(props) => (props.$isFocused ? "none" : "block")};
 
       path {
         transition: 0.3s;
-        fill: ${props => props.theme.text};
+        fill: ${(props) => props.theme.text};
       }
     }
   }
 
   @media only screen and (max-width: 1199px) {
-    width: ${props => (props.$isFocused ? "100%" : "142px")};
+    width: ${(props) => (props.$isFocused ? "100%" : "142px")};
     margin-right: 0;
     padding: 0;
     border-bottom: 1px solid
-      ${props => (props.$isFocused ? "#DEE0E6" : "rgba(0, 0, 0, 0)")};
+      ${(props) => (props.$isFocused ? "#DEE0E6" : "rgba(0, 0, 0, 0)")};
 
     .shortcut-icon {
       display: none;
     }
 
     .search-icon {
-      display: ${props => (props.$isFocused ? "none" : "block")};
+      display: ${(props) => (props.$isFocused ? "none" : "block")};
     }
 
     .reset-icon {
@@ -126,24 +126,24 @@ export const Container = styled.div`
     }
 
     input {
-      height: ${props =>
+      height: ${(props) =>
         props.$isFocused ? MOBILE_HEADER_HEIGHT + "px" : "auto"};
       margin: 0;
-      padding: ${props => (props.$isFocused ? "14px 16px" : "0")};
+      padding: ${(props) => (props.$isFocused ? "14px 16px" : "0")};
       transition: none;
     }
   }
 
   @media (max-width: 910px) {
-    width: ${props => (props.$isFocused ? "100%" : "40px")};
+    width: ${(props) => (props.$isFocused ? "100%" : "40px")};
   }
 
   @media (max-width: 805px) {
-    width: ${props => (props.$isFocused ? "100%" : 0)};
+    width: ${(props) => (props.$isFocused ? "100%" : 0)};
 
     input {
       min-width: 0;
-      opacity: ${props => (props.$isFocused ? 1 : 0)};
+      opacity: ${(props) => (props.$isFocused ? 1 : 0)};
     }
   }
 
@@ -159,11 +159,11 @@ export const Container = styled.div`
 
   @media (max-width: 599px) {
     input {
-      height: ${props =>
+      height: ${(props) =>
         props.$isFocused ? EXTRA_MOBILE_HEADER_HEIGHT + "px" : "auto"};
     }
   }
-`
+`;
 
 const placeholderFocusedStyle = css`
   ::-webkit-input-placeholder {
@@ -189,11 +189,11 @@ const placeholderFocusedStyle = css`
     line-height: 28px;
     font-family: ${FONT.PRIMARY};
   }
-`
+`;
 
 export const Input = styled.input`
-  min-width: ${props => (props.$isFocused ? 84 : 0)}px;
-  width: ${props => (props.$isFocused ? 100 : 0)}%;
+  min-width: ${(props) => (props.$isFocused ? 84 : 0)}px;
+  width: ${(props) => (props.$isFocused ? 100 : 0)}%;
 
   :not(:focus) {
     cursor: pointer;
@@ -212,7 +212,7 @@ export const Input = styled.input`
   font-weight: normal;
   font-size: 15px;
   line-height: 28px;
-  color: ${props => props.theme.text};
+  color: ${(props) => props.theme.text};
 
   ::-webkit-search-decoration,
   ::-webkit-search-cancel-button,
@@ -248,14 +248,14 @@ export const Input = styled.input`
     font-family: ${FONT.PRIMARY};
   }
 
-  ${props => props.$isFocused && placeholderFocusedStyle}
+  ${(props) => props.$isFocused && placeholderFocusedStyle}
 
   @media only screen and (max-width: 1199px) {
     font-size: 15px;
     line-height: 28px;
     padding: 14px 16px;
   }
-`
+`;
 
 export const Label = styled.div`
   font-family: ${FONT.PRIMARY};
@@ -264,13 +264,13 @@ export const Label = styled.div`
   line-height: 12px;
   margin-right: 8px;
 
-  display: ${props => (props.$isFocused ? "none" : "block")};
+  display: ${(props) => (props.$isFocused ? "none" : "block")};
 
-  color: ${props => props.theme.searchPlaceholder};
+  color: ${(props) => props.theme.searchPlaceholder};
   transition: 0.3s;
 
   :hover {
-    color: ${props => props.theme.text};
+    color: ${(props) => props.theme.text};
   }
 
   @media (max-width: 1199px) {
@@ -280,4 +280,4 @@ export const Label = styled.div`
   @media (max-width: 910px) {
     display: none;
   }
-`
+`;

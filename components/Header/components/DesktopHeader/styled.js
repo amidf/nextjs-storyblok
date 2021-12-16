@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
   @media only screen and (max-width: 1199px) {
@@ -6,6 +6,6 @@ export const Container = styled.div`
       display: none;
     }
   }
-`
+`;
 
-export { LogoContainer, SocLink, Nav, Box, Link, InnerLink } from "../../styled"
+export { LogoContainer, SocLink, Nav, Box, Link } from "../../styled";

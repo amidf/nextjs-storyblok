@@ -1,8 +1,6 @@
-import { Link as GLink } from "gatsby"
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { media } from "src/uikit"
-import { FONT } from "src/developers/constants"
+import { FONT } from "../../../../constants";
 
 export const ToggleButton = styled.button`
   display: none;
@@ -24,21 +22,21 @@ export const ToggleButton = styled.button`
   padding-right: 40px;
   cursor: pointer;
 
-  @media ${media.tablet} {
+  @media (max-width: 991px) {
     display: flex;
   }
 
-  @media ${media.mobile} {
+  @media (max-width: 767px) {
     padding-right: 16px;
   }
-`
+`;
 
 export const Caption = styled.span`
   font-family: ${FONT.PRIMARY};
   font-weight: 600;
   font-size: 12px;
   line-height: 20px;
-  color: ${props => props.theme.footerCaption || "rgba(0, 21, 83, 0.5)"};
+  color: ${(props) => props.theme.footerCaption || "rgba(0, 21, 83, 0.5)"};
   text-transform: uppercase;
   margin-bottom: 16px;
   display: block;
@@ -46,17 +44,17 @@ export const Caption = styled.span`
   @media (max-width: 599px) {
     margin-bottom: 12px;
   }
-`
+`;
 
 export const Navigation = styled.nav`
   display: block;
-`
+`;
 
 export const Item = styled.li`
   margin-top: 10px;
   font-size: 13px;
   line-height: 20px;
-  color: ${props => props.theme.text || "#142470"};
+  color: ${(props) => props.theme.text || "#142470"};
 
   &:last-child {
     margin-bottom: 24px;
@@ -74,7 +72,7 @@ export const Item = styled.li`
       margin-bottom: 16px;
     }
   }
-`
+`;
 
 export const Container = styled.div`
   flex: 2;
@@ -198,18 +196,18 @@ export const Container = styled.div`
   @media only screen and (max-width: 413px) {
     min-width: 100%;
   }
-`
+`;
 
 export const List = styled.ul`
   margin: 0;
   list-style: none;
-`
+`;
 
 export const InnerContainer = styled.div`
   width: 160px;
-`
+`;
 
-export const Link = styled(GLink)`
+export const Link = styled.a`
   text-decoration: none;
   color: inherit;
   font-style: normal;
@@ -217,11 +215,11 @@ export const Link = styled(GLink)`
   font-weight: 600;
   font-size: 13px;
   line-height: 24px;
-  color: ${props => props.theme.text || "#142470"};
+  color: ${(props) => props.theme.text || "#142470"};
   display: block;
   transition: 0.3s;
 
   &:hover {
-    color: ${props => props.theme.socLinkHover || "#5855f4"};
+    color: ${(props) => props.theme.socLinkHover || "#5855f4"};
   }
-`
+`;

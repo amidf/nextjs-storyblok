@@ -1,14 +1,14 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { colors, media } from "../../uikit"
-import { FONT } from "src/developers/constants"
+import { colors, media } from "../../styles";
+import { FONT } from "../../constants";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
   flex-shrink: 1;
   margin-top: auto;
   z-index: 2;
-  background-color: ${props => props.theme.bg || "#fff"};
+  background-color: ${(props) => props.theme.bg || "#fff"};
 
   &.mobile-nav {
     .documents {
@@ -23,13 +23,13 @@ export const FooterWrapper = styled.footer`
       height: calc(100vh - 48px);
     }
   }
-`
+`;
 
 export const FooterContent = styled.div`
   display: flex;
   justify-content: center;
-  border-top: 1px solid ${props => props.theme.footerBorder || "#eee"};
-`
+  border-top: 1px solid ${(props) => props.theme.footerBorder || "#eee"};
+`;
 
 export const FooterContentBox = styled.div`
   display: grid;
@@ -290,7 +290,7 @@ export const FooterContentBox = styled.div`
           }
 
           span {
-            display: ${props => (props.$isEn ? "none" : "block")};
+            display: ${(props) => (props.$isEn ? "none" : "block")};
           }
         }
 
@@ -325,7 +325,7 @@ export const FooterContentBox = styled.div`
       }
     }
   }
-`
+`;
 
 export const SubFooterWrapper = styled.div`
   display: flex;
@@ -340,7 +340,7 @@ export const SubFooterWrapper = styled.div`
   @media ${media.tablet} {
     padding: 0;
   }
-`
+`;
 
 export const SubFooterSubWrapper = styled.div`
   display: flex;
@@ -349,7 +349,8 @@ export const SubFooterSubWrapper = styled.div`
   align-items: center;
   padding: 24px 0;
   width: 1264px;
-  border-top: 1px solid ${props => props.theme.subFooterTopBorder || "#EAEBEF"};
+  border-top: 1px solid
+    ${(props) => props.theme.subFooterTopBorder || "#EAEBEF"};
 
   &.mobile-subfooter {
     border-top: none;
@@ -400,7 +401,7 @@ export const SubFooterSubWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 export const MailUnderlay = styled.div`
   z-index: 100;
@@ -431,7 +432,7 @@ export const MailUnderlay = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 export const SubFooterContainer = styled.div`
   display: flex;
@@ -478,7 +479,7 @@ export const SubFooterContainer = styled.div`
     align-items: flex-start;
     flex-direction: column;
   }
-`
+`;
 
 export const SkolkovoBox = styled.div`
   width: 222px;
@@ -495,13 +496,13 @@ export const SkolkovoBox = styled.div`
     margin-top: 24px;
     width: 100%;
   }
-`
+`;
 
 export const SkolkovoText = styled.p`
   font-family: ${FONT.PRIMARY};
   font-size: 9px;
   line-height: 12px;
-  color: ${props => props.theme.text || "#001553"};
+  color: ${(props) => props.theme.text || "#001553"};
   margin: 0;
   margin-left: 12px;
-`
+`;

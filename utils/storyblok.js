@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StoryblokClient from "storyblok-js-client";
 
 const Storyblok = new StoryblokClient({
-  accessToken: "EWHu7E6mdJq2DEKDmbCjlgtt",
+  accessToken: "9rrNo3BIlSF9rrI9DS7G8Att",
   cache: {
     clear: "auto",
     type: "memory",
@@ -19,7 +19,7 @@ export function useStoryblok(originalStory, preview, locale) {
     if (typeof StoryblokBridge !== "undefined") {
       // initialize the bridge with your token
       const storyblokInstance = new StoryblokBridge({
-        resolveRelations: ["headline", "text"],
+        resolveRelations: ["post"],
         language: locale,
       });
 
@@ -30,7 +30,6 @@ export function useStoryblok(originalStory, preview, locale) {
 
       // live update the story on input events
       storyblokInstance.on("input", (event) => {
-        console.log("input", story, event.story);
         if (story && event.story._uid === story._uid) {
           setStory(event.story);
         }
@@ -40,7 +39,7 @@ export function useStoryblok(originalStory, preview, locale) {
         // loading the draft version on initial enter of editor
         Storyblok.get(`cdn/stories/${event.storyId}`, {
           version: "draft",
-          resolve_relations: ["headline", "text"],
+          resolve_relations: ["post"],
           language: locale,
         })
           .then(({ data }) => {

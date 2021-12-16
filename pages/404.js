@@ -9,18 +9,21 @@ export default function Page404({ preview, locale, locales, defaultLocale }) {
   // const enableBridge = preview; // load only inside preview mode
   const storyLoaded = useStoryblok(null, enableBridge, locale);
 
-  console.log({ storyLoaded });
+  console.log("404 page");
 
   let content = <h1>Not found</h1>;
 
   if (storyLoaded && storyLoaded.content)
-    content = <DynamicComponent blok={storyLoaded.content} />;
+    content = (
+      <DynamicComponent
+        blok={storyLoaded.content}
+        locale={locale}
+        locales={locales}
+        defaultLocale={defaultLocale}
+      />
+    );
 
-  return (
-    <Layout locale={locale} locales={locales} defaultLocale={defaultLocale}>
-      {content}
-    </Layout>
-  );
+  return content;
 }
 
 export async function getStaticProps({

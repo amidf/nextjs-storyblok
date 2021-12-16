@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { FONT } from "src/developers/constants"
+import { FONT } from "../../../../constants";
 
 export const List = styled.ul`
   position: absolute;
@@ -12,15 +12,15 @@ export const List = styled.ul`
   overflow-y: auto;
   padding: 8px 0;
   margin: 0;
-  background-color: ${props => props.theme.searchBg};
-  box-shadow: 0px 1px 4px ${props => props.theme.searchOutline};
+  background-color: ${(props) => props.theme.searchBg};
+  box-shadow: 0px 1px 4px ${(props) => props.theme.searchOutline};
   border-radius: 0 0 4px 4px;
 
   list-style: none;
 
-  border-top: 1px solid ${props => props.theme.searchBorder};
+  border-top: 1px solid ${(props) => props.theme.searchBorder};
 
-  display: ${props => (props.empty ? "flex" : "block")};
+  display: ${(props) => (props.empty ? "flex" : "block")};
   align-items: center;
   justify-content: center;
 
@@ -40,7 +40,7 @@ export const List = styled.ul`
     max-height: calc(100vh - 56px);
     box-shadow: none;
   }
-`
+`;
 
 export const Category = styled.li`
   padding: 0 24px;
@@ -69,13 +69,13 @@ export const Category = styled.li`
       }
     }
   }
-`
+`;
 
 export const InnerList = styled.ul`
   list-style: none;
   padding: 0;
   border-bottom: 1px solid #dee0e6;
-`
+`;
 
 export const ListItem = styled.li`
   margin: 8px;
@@ -92,13 +92,13 @@ export const ListItem = styled.li`
     height: 1px;
     position: absolute;
     bottom: -1px;
-    background-color: ${props => props.theme.searchBorder};
+    background-color: ${(props) => props.theme.searchBorder};
     margin-left: 16px;
   }
 
   :hover {
     .hover-bg {
-      background-color: ${props => props.theme.searchResultHover};
+      background-color: ${(props) => props.theme.searchResultHover};
     }
 
     .text-container {
@@ -116,7 +116,7 @@ export const ListItem = styled.li`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.text};
+    color: ${(props) => props.theme.text};
     padding: 16px;
     position: relative;
     display: flex;
@@ -137,7 +137,7 @@ export const ListItem = styled.li`
     margin-right: 4px;
 
     path {
-      stroke: ${props => props.theme.text};
+      stroke: ${(props) => props.theme.text};
     }
   }
 
@@ -169,7 +169,7 @@ export const ListItem = styled.li`
     font-weight: bold;
     font-size: 15px;
     line-height: 28px;
-    color: ${props => props.theme.text};
+    color: ${(props) => props.theme.text};
 
     &:first-child {
       margin-left: 0;
@@ -189,7 +189,7 @@ export const ListItem = styled.li`
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
-    color: ${props => props.theme.searchResultText};
+    color: ${(props) => props.theme.searchResultText};
   }
 
   @media only screen and (max-width: 414px) {
@@ -205,4 +205,4 @@ export const ListItem = styled.li`
       line-height: 22px;
     }
   }
-`
+`;

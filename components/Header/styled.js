@@ -1,20 +1,19 @@
-import styled, { css } from "styled-components"
-import { Link as GLink } from "gatsby"
+import styled from "styled-components";
 
 import {
   DESKTOP_HEADER_HEIGHT,
   MOBILE_HEADER_HEIGHT,
   EXTRA_MOBILE_HEADER_HEIGHT,
   FONT,
-} from "../constants"
+} from "../../constants";
 
 export const Container = styled.header`
   width: 100%;
   height: ${DESKTOP_HEADER_HEIGHT}px;
   position: sticky;
   top: 0;
-  border-bottom: 1px solid ${props => props.theme.headerBorder};
-  background-color: ${props => props.theme.bg || "#fff"};
+  border-bottom: 1px solid ${(props) => props.theme.headerBorder};
+  background-color: ${(props) => props.theme.bg || "#fff"};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +54,7 @@ export const Container = styled.header`
     button:hover,
     button:active,
     button {
-      ${props =>
+      ${(props) =>
         props.theme.buttonInverseColor
           ? "color: " + props.theme.buttonInverseColor
           : ""};
@@ -84,14 +83,14 @@ export const Container = styled.header`
       top: -15px;
     }
   }
-`
+`;
 
-export const LogoContainer = styled.div``
+export const LogoContainer = styled.div``;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-`
+`;
 
 export const SocLink = styled.a`
   margin-right: 24px;
@@ -99,14 +98,14 @@ export const SocLink = styled.a`
   svg {
     path {
       transition: 0.3s;
-      fill: ${props => props.theme.text};
+      fill: ${(props) => props.theme.text};
     }
   }
 
   :hover {
     svg {
       path {
-        fill: ${props => props.theme.socLinkHover};
+        fill: ${(props) => props.theme.socLinkHover};
       }
     }
   }
@@ -114,14 +113,14 @@ export const SocLink = styled.a`
   :last-child {
     margin-right: 0;
   }
-`
+`;
 
-const commonLinkStyle = css`
+export const Link = styled.a`
   font-family: ${FONT.PRIMARY};
   font-weight: 600;
   font-size: 13px;
   line-height: 24px;
-  color: ${props => props.theme.text};
+  color: ${(props) => props.theme.text};
   text-decoration: none;
   transition: 0.3s;
   margin: 0 12px;
@@ -135,21 +134,13 @@ const commonLinkStyle = css`
   }
 
   :hover {
-    color: ${props => props.theme.socLinkHover};
+    color: ${(props) => props.theme.socLinkHover};
   }
 
   @media (max-width: 1199px) {
     margin: 0 8px;
   }
-`
-
-export const Link = styled.a`
-  ${commonLinkStyle}
-`
-
-export const InnerLink = styled(GLink)`
-  ${commonLinkStyle}
-`
+`;
 
 export const Box = styled.div`
   display: flex;
@@ -157,8 +148,8 @@ export const Box = styled.div`
   transition: 0.3s;
   z-index: 2;
 
-  opacity: ${props => (props.searchFocused ? 0 : 1)};
-  visibility: ${props => (props.searchFocused ? "hidden" : "visible")};
+  opacity: ${(props) => (props.searchFocused ? 0 : 1)};
+  visibility: ${(props) => (props.searchFocused ? "hidden" : "visible")};
 
   @media only screen and (max-width: 910px) {
     > a:not(:nth-child(2)) {
@@ -175,4 +166,4 @@ export const Box = styled.div`
       display: none;
     }
   }
-`
+`;

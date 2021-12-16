@@ -1,0 +1,304 @@
+{
+  "metaTitle": "Home",
+  "metaDescription": "Dasha is a conversational-AI-as-a-service platform that lets you embed realistic voice and text conversational capabilities into your apps or products. With a single integration, create smart conversational apps for web, desktop, mobile and call centers.",
+
+  "topBanner": {
+    "new": "NEW ",
+    "playgroundLink": "https://playground.dasha.ai/",
+    "playgroundLabel": "Try",
+    "text": " Dasha in your browser with Dasha Playground!"
+  },
+
+  "header": {
+    "logoLink": "/en-us",
+    "signUp": "Sign Up",
+    "signUpLink": "https://auth.dasha.ai/account/register",
+    "contactSales": "Contact sales",
+    "links": [
+      { "label": "Documentation", "link": "https://docs.dasha.ai" },
+      { "label": "Playground", "link": "https://playground.dasha.ai/" },
+      { "label": "Blog", "link": "/en-us/blog" }
+    ],
+    "searchDocs": "Search docs",
+    "twitterLink": "https://twitter.com/DashaAI_/",
+    "gitHubLink": "https://github.com/dasha-samples",
+    "slackLink": "https://community.dasha.ai",
+    "mobileLinks": [
+      { "href": "https://docs.dasha.ai", "name": "Documentation" },
+      { "href": "https://community.dasha.ai", "name": "Developer Community" },
+      { "href": "/blog", "name": "Blog" },
+      { "href": "/blog?categoryId=ceoNotes", "name": "CEO’s notes" },
+      { "href": "", "name": "Term of service" },
+      { "href": "", "name": "Privacy Policy" }
+    ]
+  },
+
+  "main": {
+    "title": "Human-like conversational AI for developers",
+    "description": "Dasha is a conversational-AI-as-a-service platform that lets you embed realistic voice and text conversational capabilities into your apps or products. With a single integration, create smart conversational apps for web, desktop, mobile, IoT and call centers.",
+    "signUpBtn": "Sign Up and Start Building",
+    "signUpLink": "https://auth.dasha.ai/account/register",
+    "tryInBrowser": "https://playground.dasha.ai/",
+    "tryInBrowserLabel": "Try in a browser",
+    "code": ["app.js", "sample.dsl"],
+    "video": "https://player.vimeo.com/video/529268921",
+    "fallbackVideo": "https://player.vimeo.com/video/529268921"
+  },
+
+  "interactiveSamples": {
+    "title": "Features",
+    "tabs": [
+      {
+        "title": "Chat support",
+        "tabName": "Text chat",
+        "content": "Same app designed for voice works perfectly with text without any changes. Moreover, your app can support voice and text conversations concurrently. Connect Dasha to anything on the Internet: email, SMS, Whatsapp, Discord, Zendesk, Slack, Intercom, Drift, your own widget, any chat app you want.",
+        "files": ["chat.js"]
+      },
+      {
+        "title": "Intents in plain JSON",
+        "tabName": "Custom intents",
+        "content": "Train your custom intents in plain JSON. Change it programmatically using your data in real-time.",
+        "files": ["intents.json"]
+      },
+      {
+        "title": "Non-scripted behavior",
+        "tabName": "Digressions",
+        "content": "Digression is a dialogue node to which the user can jump from anywhere in the conversation. This allows you to design human-like non-structured flows which, in mimicking human dialogue patterns, generate a multitude of unpredictable pathways in an active conversation. Anything of the following and more is possible:\nHuman: Extra bacon, please!\nAI: Got it, extra bacon. Anything else?\nHuman: Yeah, do you deliver to SOHO?\nAI: We do, we deliver throughout the city.\n-----\nHuman: Do you deliver to SOHO?\nAI: We do, we deliver anywhere in the city.\nHuman: In that case, I want extra bacon.\nAI: Okay, added extra bacon. Anything else?",
+        "files": ["digressions.dsl"]
+      }
+    ]
+  },
+
+  "samples": {
+    "label": "Code samples",
+    "title": "Get started with code samples",
+    "requstSample": "Don’t see what you want?",
+    "requstSampleBtn": "Request a code sample",
+    "items": [
+      {
+        "category": "Calls",
+        "title": "Conversational IVR",
+        "description": "Replace your old-style IVR system with Dasha.",
+        "langs": ["TypeScript"],
+        "link": "https://github.com/dasha-samples/dasha-first-app"
+      },
+      {
+        "category": "Calls",
+        "title": "Receptionist",
+        "description": "Automate inbound calls and schedule appointments with your customers.",
+        "langs": ["TypeScript"],
+        "link": "https://github.com/dasha-samples/dasha-smb-receptionist-demo"
+      },
+      {
+        "category": "Calls",
+        "title": "Self-service",
+        "description": "Provide self-service to your customers. This advanced demo shows how to handle a little bit more complex conversation with Dasha.",
+        "langs": ["TypeScript"],
+        "link": "https://github.com/dasha-samples/dasha-money-transfer-demo"
+      },
+      {
+        "category": "IoT",
+        "title": "Control vacuum cleaner",
+        "description": "This example shows how to build an assistant for controlling Xiaomi vacuum cleaner on top of Dasha.",
+        "langs": ["TypeScript"],
+        "link": "https://github.com/dasha-samples/dasha-miio-vacuum-cleaner"
+      },
+      {
+        "category": "RPA",
+        "title": "Process invoices with OCR",
+        "description": "Use RPA tools with Dasha - for example, Tesseract OCR, UiPath or Automation Anywhere in real-time while talking.",
+        "langs": ["TypeScript"],
+        "link": "https://github.com/dasha-samples/dasha-rpa-ocr-tesseract"
+      }
+    ],
+
+    "requestSampleModal": {
+      "title": "Request Code Sample",
+      "email": "Your email:",
+      "code": "Please describe your use case:",
+      "errorEmail": "Invalid email",
+      "errorEmpty": "Field shouldn't be empty",
+      "submitButton": "Submit",
+      "successCloseButton": "OK",
+      "successTitle": "Thank you",
+      "successText": "We'll be in touch shortly!",
+      "portalId": "7627878",
+      "formId": "5580fb0c-22e1-4ce0-8319-7ed1f04a9f66"
+    }
+  },
+
+  "features": {
+    "title": "How it works",
+    "items": [
+      {
+        "label": "Design conversations",
+        "title": "Declarative language for conversations",
+        "description": "DashaScript is an event-driven declarative programming language used to design complex real-world conversations that pass a limited Turing test. Automate call center conversations, recreate the Google Duplex demo in under 400 lines of code or create a no-code GUI for your users that translates into DashaScript code.",
+        "code": ["sample.dsl"],
+        "link": "https://docs.dasha.ai"
+      },
+      {
+        "label": "Build apps",
+        "title": "Build for any platform",
+        "description": "If it is connected to the internet and has access to a speaker/mic, it can run a Dasha application. Any platform (Web server, browser, iOS/Android, Phone/VoIP, MacOS/Linux/Windows, Raspberry Pi, etc.), programming languages (NodeJS, Java, Python, C#, C++, whatever) can be used. Note that the beta program offers only the NodeJS SDK.",
+        "code": ["app.js"],
+        "link": "https://docs.dasha.ai"
+      },
+      {
+        "label": "Integrate with anything",
+        "title": "Existing Data and Business Logic",
+        "description": "Your conversational voice/chat apps use your existing infrastructure, including databases, external services (Airtable, Zendesk, TalkDesk, etc.) and business logic. Run conversations through anything (telephone, in-app, IOT) using Dasha SDK. Feed your custom data into Dasha and consume results where they provide most value (BI, analytics, decision engines). ",
+        "code": ["integration.js", "integration.dsl"],
+        "link": "https://docs.dasha.ai"
+      },
+      {
+        "label": "Dasha Studio",
+        "title": "VSCode extension",
+        "description": "Build, manage and deploy Dasha applications from VSCode. Enjoy IntelliSense for DashaScript, a low-code graphical WYSIWYG interface and a powerful analytics engine for syntax and errors highlighting. Ships with the Profiler which visualizes conversational outcomes to easily train and improve your AI apps.",
+        "img": "/ds2.png",
+        "link": "https://marketplace.visualstudio.com/items?itemName=dasha-ai.dashastudio"
+      },
+      {
+        "label": "Free tier",
+        "title": "Free tier for Builders and Testers",
+        "description": "You can use the fully functional free tier to kick the tires, run test calls and figure out the Dasha way of building a conversational application. Once your apps are trained, put in your credit card and go. Or decide that it’s not your thing, it’s up to you.",
+        "img": "/free-tier.png",
+        "link": "https://docs.dasha.ai"
+      }
+    ]
+  },
+
+  "community": {
+    "label": "Developer Community",
+    "title": "Learn, share experience, communicate",
+    "description": "Join our developer community to hang with like-minded developers, get answers to your questions from Dasha engineers, share use cases, discuss AI, ML and algorithms and generally learn new things.",
+    "joinBtn": "Join Community",
+    "joinLink": "https://community.dasha.ai"
+  },
+
+  "team": {
+    "label": "Team",
+    "title": "Made by developers for developers",
+    "description": "Our goal is passing voice Turing test. We're building API layer within business communications so that now it's addressable by just developers.",
+    "items": [
+      {
+        "avatar": "/developers/vlad.png",
+        "position": "Co-Founder & CEO, ACM ICPC",
+        "name": "Vlad Chernyshov",
+        "bio": "Vlad Chernyshov is the CEO of Dasha AI. Vlad is passionately committed to passing the Turing Test, which is one of the company's main goals. Vladislav holds a master's degree in computer science and has participated in ACM ICPC."
+      },
+      {
+        "avatar": "/developers/alex.png",
+        "position": "Chief Research Scientist, Doctor of Science, Professor, former Kaggle #1",
+        "name": "Dr. Alexander Dyakonov, PhD",
+        "bio": "Alexander is the Chief Research Scientist at Dasha AI. His passion for computer science and machine learning led him to the title of Kaggle Grandmaster. Alexander is a Doctor of Science with more than 20 years of experience. Being a Professor at the largest CIS university, Alexander published two books and 50 scientific articles."
+      },
+      {
+        "avatar": "/developers/ilya.png",
+        "position": "Co-Founder & CTO, Assoc. Professor, ACM ICPC",
+        "name": "Ilya Stupakov, PhD",
+        "bio": "Ilya brings almost two decades of experience in managing engineering teams to Dasha AI. Ilya is a Ph.D. in computer science and has participated in ACM ICPC. Ilya's focus at Dasha AI is building a world-class engineering team to help Dasha pass the Turing Test."
+      }
+    ]
+  },
+
+  "contact": {
+    "label": "Beta",
+    "description": "With Dasha you can build: call center automation, agent enhancement / speech analytics, booking a table in a restaurant, receptionist, robot for Clubhouse / Discord, add voice control to existing mobile app, conversational IVR ...the possibilities are virtually endless!",
+    "title": "Get started with Dasha",
+    "signUpLink": "https://auth.dasha.ai/account/register",
+    "signUp": "Sign Up and Start Building",
+    "forSales": "Not a developer?",
+    "salesBtn": "Contact sales"
+  },
+
+  "salesModal": {
+    "title": "Contact sales",
+    "email": "Work email",
+    "message": "Message",
+    "submitButton": "Let's talk",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "company": "Company",
+    "phone": "Phone",
+    "warning": "",
+    "errorEmail": "Invalid email",
+    "errorEmpty": "Field shouldn't be empty",
+    "errorEmptyField": "Это поле не может быть пустым",
+    "errorPhoneField": "Invalid phone",
+    "successCloseButton": "OK",
+    "successTitle": "Thank you!",
+    "successText": "We'll be in touch shortly!",
+    "portalId": "7627878",
+    "formId": "9fa04628-1911-4d73-bac4-34269064367d"
+  },
+
+  "blog": {
+    "title": "The Dasha Blog",
+    "loadMoreLabel": "Load More",
+    "subscribe": "Subscribe",
+    "placeholder": "Your email address",
+    "successCloseButton": "OK",
+    "successTitle": "Thank you",
+    "successText": "You've been successfully subscribed to our newsletter using this email:",
+    "errorEmail": "Invalid email",
+    "errorEmpty": "Field shouldn't be empty",
+    "portalId": "7627878",
+    "formId": "8078383b-819b-469f-af92-669982f13fc2"
+  },
+
+  "footer": {
+    "socIconsCaption": "Follow",
+    "twitterLink": "https://twitter.com/DashaAI_/",
+    "gitHubLink": "https://github.com/dasha-samples",
+    "slackLink": "https://community.dasha.ai",
+    "copyright": {
+      "title": "© Dasha.AI Inc.",
+      "mailto": ""
+    },
+    "termsColTitle": "Terms",
+    "terms": { "title": "Terms of service", "url": "/en-us/term-of-service" },
+    "privacy": { "title": "Privacy policy", "url": "/en-us/privacy-policy" },
+    "items": [
+      {
+        "title": "Learn",
+        "children": [
+          { "title": "Blog", "url": "/en-us/blog" },
+          { "title": "CEO's notes", "url": "/en-us/blog?category=ceoNotes" }
+        ]
+      },
+      {
+        "title": "Build",
+        "children": [
+          { "title": "Documentation", "url": "https://docs.dasha.ai" },
+          {
+            "title": "Developer community",
+            "url": "https://community.dasha.ai"
+          },
+          {
+            "title": "status.dasha.ai",
+            "url": "https://status.dasha.ai/"
+          }
+        ]
+      },
+      {
+        "title": "Solutions",
+        "children": [
+          { "title": "Enterprise", "url": "/en-us/solutions-enterprises" },
+          { "title": "BPO Call Centers", "url": "/en-us/bpo-ai-landing" },
+          { "title": "Lead Generation", "url": "/en-us/leadgen-ai-landing" },
+          { "title": "Insurance", "url": "/en-us/solutions-insurance" }
+        ]
+      },
+      {
+        "title": "Contacts",
+        "children": [
+          { "title": "885 Third Avenue," },
+          { "title": "24th floor, New York" },
+          { "title": "NY 10022" },
+          { "title": "support@dasha.ai" }
+        ]
+      }
+    ]
+  }
+}

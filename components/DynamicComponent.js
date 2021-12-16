@@ -1,13 +1,9 @@
-import Grid from "./Grid";
 import Page from "./Page";
-import Headline from "./Headline";
-import Text from "./Text";
+import PostPage from "./PostPage";
 
 const Components = {
-  grid: Grid,
   page: Page,
-  headline: Headline,
-  text: Text,
+  post: PostPage,
 };
 
 const DynamicComponent = ({ blok }) => {

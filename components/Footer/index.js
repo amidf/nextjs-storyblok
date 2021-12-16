@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   FooterWrapper,
   FooterContent,
@@ -8,22 +8,19 @@ import {
   SubFooterContainer,
   SkolkovoBox,
   SkolkovoText,
-} from "./subFooterWrapper"
-import Col from "./components/Col"
-import { AHref } from "./Copyright"
-import { injectIntl, useIntl } from "gatsby-plugin-intl"
-import { Container, InnerContainer, Caption } from "./components/Col/styled"
-import * as S from "./styled"
-import TwitterIcon from "../Header/assets/twitter-logo.inline.svg"
-import GitHubIcon from "../Header/assets/github-logo.inline.svg"
-import SlackIcon from "../Header/assets/slack-logo.inline.svg"
-import SkolkovoLogo from "./assets/skolkovo.inline.svg"
-import Button from "src/newUikit/Button"
-import { Link } from "./components/Col/styled"
+} from "./subFooterWrapper";
+import Col from "./components/Col";
+import { AHref } from "./Copyright";
+import { Container, InnerContainer, Caption } from "./components/Col/styled";
+import * as S from "./styled";
+import TwitterIcon from "../Header/assets/twitter-logo.inline.svg";
+import GitHubIcon from "../Header/assets/github-logo.inline.svg";
+import SlackIcon from "../Header/assets/slack-logo.inline.svg";
+import SkolkovoLogo from "./assets/skolkovo.inline.svg";
+import Button from "../Button";
+import { Link } from "./components/Col/styled";
 
 const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
-  const { locale } = useIntl()
-
   return (
     <>
       <FooterWrapper
@@ -32,15 +29,14 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
       >
         <FooterContent>
           <FooterContentBox
-            $isEn={!locale.includes("ru")}
+            // $isEn={!locale.includes("ru")}
             className={isMobileMenu && "mobile-menu"}
           >
-            {}
             {isMobileMenu && (
               <>
                 <Col
                   className="mobile-links"
-                  items={content.header.links.map(item => ({
+                  items={content.header.links.map((item) => ({
                     title: item.label,
                     url: item.link,
                   }))}
@@ -54,7 +50,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   >
                     {content.header.contactSales}
                   </Button>
-                  <Button size="sm" url={`${locale}/sign-up`}>
+                  <Button size="sm" url={`/sign-up`}>
                     {content.header.signUp}
                   </Button>
                 </div>
@@ -62,11 +58,11 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
             )}
             <Container className="desktop-soc-icons">
               <InnerContainer>
-                <Caption>{content.socIconsCaption}</Caption>
+                <Caption>{content.footer.socIconsCaption}</Caption>
                 <S.SocIcons className="h-card">
                   <a
                     className="u-url"
-                    href={content.twitterLink}
+                    href={content.footer.twitterLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -74,7 +70,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   </a>
                   <a
                     className="u-url"
-                    href={content.gitHubLink}
+                    href={content.footer.gitHubLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -82,7 +78,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   </a>
                   <a
                     className="u-url"
-                    href={content.slackLink}
+                    href={content.footer.slackLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -91,12 +87,16 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                 </S.SocIcons>
               </InnerContainer>
             </Container>
-            {content.items.map(item => (
+            {content.footer.items.map((item) => (
               <Col key={item.title} title={item.title} items={item.children} />
             ))}
             <Col
               title={content.termsColTitle}
-              items={[content.terms, content.privacy, content.termOfUse || {}]}
+              items={[
+                content.footer.terms,
+                content.footer.privacy,
+                content.footer.termOfUse || {},
+              ]}
             />
           </FooterContentBox>
         </FooterContent>
@@ -104,11 +104,11 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
           <SubFooterSubWrapper className={isMobileMenu && "mobile-subfooter"}>
             <SubFooterContainer>
               <Container className="mobile-soc-icons">
-                <Caption>{content.socIconsCaption}</Caption>
+                <Caption>{content.footer.socIconsCaption}</Caption>
                 <S.SocIcons className="h-card">
                   <a
                     className="u-url"
-                    href={content.twitterLink}
+                    href={content.footer.twitterLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -116,7 +116,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   </a>
                   <a
                     className="u-url"
-                    href={content.gitHubLink}
+                    href={content.footer.gitHubLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -124,7 +124,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   </a>
                   <a
                     className="u-url"
-                    href={content.slackLink}
+                    href={content.footer.slackLink}
                     target="_blank"
                     rel="noopener noreferrer me"
                   >
@@ -132,14 +132,18 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
                   </a>
                 </S.SocIcons>
               </Container>
-              <AHref as="span">{content.copyright.title}</AHref>
+              <AHref as="span">{content.footer.copyright.title}</AHref>
 
               <div className="documents">
-                <Link to={content.terms.url}>{content.terms.title}</Link>
-                <Link to={content.privacy.url}>{content.privacy.title}</Link>
-                {content.termOfUse && (
-                  <Link to={content.termOfUse.url}>
-                    {content.termOfUse.title}
+                <Link to={content.footer.terms.url}>
+                  {content.footer.terms.title}
+                </Link>
+                <Link to={content.footer.privacy.url}>
+                  {content.footer.privacy.title}
+                </Link>
+                {content.footer.termOfUse && (
+                  <Link to={content.footer.termOfUse.url}>
+                    {content.footer.termOfUse.title}
                   </Link>
                 )}
               </div>
@@ -155,7 +159,7 @@ const FooterContainer = ({ content, isMobileMenu = false, openModal }) => {
         </SubFooterWrapper>
       </FooterWrapper>
     </>
-  )
-}
+  );
+};
 
-export default injectIntl(FooterContainer)
+export default FooterContainer;

@@ -1,0 +1,92 @@
+{
+  "purple": "#716FF6",
+  "cyan": "#2FD6D3",
+  "green": "#21D3B3",
+  "blue": "#3F9FF8",
+  "darkBlue": "#313C9D",
+
+  "dark": {
+    "bg": "#161729",
+    "text": "#fff",
+    "link": "#8785FF",
+    "caption": "#858BD6",
+    "codeBg": "#2E3361",
+
+    "carauselDot": "rgba(255, 255, 255, 0.5)",
+    "carauselDotActive": "#fff",
+
+    "headerBorder": "rgba(255, 255, 255, 0.25)",
+    "searchPlaceholder": "rgba(255, 255, 255, 0.5)",
+    "searchPlaceholderActive": "#565665",
+    "searchOutline": "rgba(0, 0, 0, 0.8)",
+    "searchBg": "#1D1E31",
+    "searchBorder": "rgba(255, 255, 255, 0.16)",
+    "searchResultHover": "#2C2D45",
+    "searchResultText": "rgba(255, 255, 255, 0.75);",
+    "socLinkHover": "#6F6CFA",
+    "buttonInverseColor": "#fff",
+    "highlight": "#8785ff",
+    "forSalesText": "#FFFFFF",
+
+    "tryInBrowserColor": "#FFFFFF",
+    "tryInBrowserHoverColor": "#FFFFFF",
+
+    "menuBtn": "#fff",
+    "menuOverlay": "rgba(22, 23, 41, 0.7)",
+
+    "bannerBg": "#292a3a",
+    "bannerText": "rgba(255, 255, 255, 0.85)",
+    "bannerLink": "#8785FF",
+
+    "modalOverlay": "rgba(22, 23, 41, 0.7)",
+
+    "cookieBg": "#28293a",
+    "cookieBorder": "rgba(255, 255, 255, 0.25);",
+
+    "footerCaption": "rgba(255, 255, 255, 0.5)",
+    "footerBorder": "rgba(255, 255, 255, 0.25)",
+    "subFooterTopBorder": "rgba(255, 255, 255, 0.08)"
+  },
+
+  "light": {
+    "bg": "#fff",
+    "text": "#001553",
+    "link": "#5855F4",
+    "caption": "#8785FF",
+    "codeBg": "#2E3361",
+
+    "carauselDot": "rgba(0, 21, 83, 0.5)",
+    "carauselDotActive": "#0A1C61",
+
+    "headerBorder": "#DEE0E6",
+    "searchPlaceholder": "#858eb0",
+    "searchPlaceholderActive": "#858eb0",
+    "searchOutline": "rgba(64, 70, 125, 0.3)",
+    "searchBg": "#fff",
+    "searchBorder": "#DEE0E6",
+    "searchResultHover": "#F8F8FA",
+    "searchResultText": "#838DA3",
+    "socLinkHover": "#5855F4",
+    "highlight": "#5855F4",
+    "forSalesText": "#001553",
+
+    "tryInBrowserColor": "#001553",
+    "tryInBrowserHoverColor": "#001553",
+
+    "menuBtn": "#142470",
+    "menuOverlay": "rgba(22, 23, 41, 0.5)",
+
+    "bannerBg": "#F7F7FD",
+    "bannerText": "rgba(0, 21, 83, 0.85)",
+    "bannerLink": "#5855F4",
+
+    "modalOverlay": "rgba(0, 21, 83, 0.5)",
+
+    "cookieBg": "#f7f7fd",
+    "cookieBorder": "#DEE0E6",
+
+    "footerCaption": "rgba(0, 21, 83, 0.5)",
+    "footerBorder": "#DEE0E6",
+    "subFooterTopBorder": "#EAEBEF"
+  }
+}

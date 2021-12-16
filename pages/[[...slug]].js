@@ -16,12 +16,15 @@ export default function Page({
   // const enableBridge = preview;
   story = useStoryblok(story, enableBridge, locale);
 
-  console.log({ story });
+  console.log("slug page");
 
   return (
-    <Layout locale={locale} locales={locales} defaultLocale={defaultLocale}>
-      <DynamicComponent blok={story.content} />
-    </Layout>
+    <DynamicComponent
+      blok={story.content}
+      locale={locale}
+      locales={locales}
+      defaultLocale={defaultLocale}
+    />
   );
 }
 
@@ -36,7 +39,7 @@ export async function getStaticProps({
 
   let sbParams = {
     version: "draft", // or "published"
-    resolve_relations: ["headline", "text"],
+    resolve_relations: ["post"],
     language: locale,
   };
 

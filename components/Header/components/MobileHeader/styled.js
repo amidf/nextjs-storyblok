@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import {
   MOBILE_HEADER_HEIGHT,
   EXTRA_MOBILE_HEADER_HEIGHT,
-} from "../../../constants"
+} from "../../../../constants";
 
-import { LogoContainer, SocLink, Nav, Box, Link, InnerLink } from "../../styled"
+import { LogoContainer, SocLink, Nav, Box, Link } from "../../styled";
 
 export const Container = styled.div`
   position: relative;
@@ -44,7 +44,7 @@ export const Container = styled.div`
       }
     }
   }
-`
+`;
 
 export const SocIcons = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const SocIcons = styled.div`
   @media only screen and (max-width: 1199px) {
     display: none;
   }
-`
+`;
 
 export const ButtonsContainer = styled.div`
   margin-left: 16px;
@@ -80,7 +80,7 @@ export const ButtonsContainer = styled.div`
   button:hover,
   button:active,
   button {
-    ${props =>
+    ${(props) =>
       props.theme.buttonInverseColor
         ? "color: " + props.theme.buttonInverseColor
         : ""};
@@ -100,7 +100,7 @@ export const ButtonsContainer = styled.div`
   @media only screen and (max-width: 599px) {
     display: none;
   }
-`
+`;
 
 export const MenuBtn = styled.button`
   border: none;
@@ -114,18 +114,18 @@ export const MenuBtn = styled.button`
 
   svg {
     path {
-      fill: ${props => props.theme.menuBtn};
+      fill: ${(props) => props.theme.menuBtn};
     }
   }
-`
+`;
 
 export const HiddenMenu = styled.div`
-  visibility: ${props => (props.$isOpened ? "visible" : "hidden")};
-  opacity: ${props => (props.$isOpened ? 1 : 0)};
+  visibility: ${(props) => (props.$isOpened ? "visible" : "hidden")};
+  opacity: ${(props) => (props.$isOpened ? 1 : 0)};
   position: fixed;
-  top: ${props => props.$offset + MOBILE_HEADER_HEIGHT}px;
+  top: ${(props) => props.$offset + MOBILE_HEADER_HEIGHT}px;
   left: 0;
-  width: ${props => (props.opened ? "calc(100% - 16px)" : "100%")};
+  width: ${(props) => (props.opened ? "calc(100% - 16px)" : "100%")};
   height: 100%;
   transition: 0.3s opacity, 0.3s visibility;
   z-index: 9998;
@@ -137,14 +137,14 @@ export const HiddenMenu = styled.div`
   button:hover,
   button:active,
   button {
-    ${props =>
+    ${(props) =>
       props.theme.buttonInverseColor
         ? "color: " + props.theme.buttonInverseColor
         : ""};
   }
 
   @media only screen and (max-width: 599px) {
-    top: ${props => props.$offset + EXTRA_MOBILE_HEADER_HEIGHT}px;
+    top: ${(props) => props.$offset + EXTRA_MOBILE_HEADER_HEIGHT}px;
     height: 100vh;
 
     > nav {
@@ -153,24 +153,24 @@ export const HiddenMenu = styled.div`
       width: 100%;
       position: fixed;
       overflow-y: scroll;
-      background-color: ${props => props.theme.bg};
+      background-color: ${(props) => props.theme.bg};
 
-      top: ${props => props.$offset + MOBILE_HEADER_HEIGHT}px;
-      height: ${props =>
+      top: ${(props) => props.$offset + MOBILE_HEADER_HEIGHT}px;
+      height: ${(props) =>
         `calc(100% - ${EXTRA_MOBILE_HEADER_HEIGHT + props.$offset}px)`};
     }
   }
-`
+`;
 
 export const Overlay = styled.div`
   height: 100%;
   width: 100%;
 
-  background-color: ${props => props.theme.menuOverlay};
+  background-color: ${(props) => props.theme.menuOverlay};
 
   @media (max-width: 413px) {
-    background-color: ${props => props.theme.bg};
+    background-color: ${(props) => props.theme.bg};
   }
-`
+`;
 
-export { LogoContainer, SocLink, Nav, Box, Link, InnerLink }
+export { LogoContainer, SocLink, Nav, Box, Link };
