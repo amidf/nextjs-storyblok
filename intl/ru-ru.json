@@ -10,7 +10,7 @@
     "contactSales": "Отдел продаж",
     "links": [
       { "label": "Документация", "link": "https://docs.dasha.ai" },
-      { "label": "Блог", "link": "/ru-ru/blog" }
+      { "label": "Блог", "link": "https://dasha.ai/ru-ru/blog" }
     ],
     "searchDocs": "Поиск по документации",
     "twitterLink": "https://twitter.com/DashaAI_/",
