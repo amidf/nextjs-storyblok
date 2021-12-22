@@ -3,7 +3,7 @@ module.exports = {
     domains: ["a.storyblok.com", "images.contentful.com"],
   },
   i18n: {
-    localeDetection: true,
+    localeDetection: false,
     locales: ["en-us", "ru-ru"],
     defaultLocale: "en-us",
   },

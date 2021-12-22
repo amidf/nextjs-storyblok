@@ -6,6 +6,29 @@
   "darkBlue": "#313C9D",
 
   "dark": {
+    "button": {
+      "state": {
+        "inverse": {
+          "purple": {
+            "text": "#fff",
+            "color": "#5855F4",
+            "border": "#5855F4",
+            "hoverText": "#fff",
+            "hover": "#6F6CFA",
+            "pressed": "#4B48F2"
+          },
+          "cyan": {
+            "text": "#fff",
+            "color": "#001553",
+            "border": " #2FD6D3",
+            "hoverText": "#fff",
+            "hover": "#02cccb",
+            "pressed": "#02b7ba"
+          }
+        }
+      }
+    },
+
     "bg": "#161729",
     "text": "#fff",
     "link": "#8785FF",
@@ -49,6 +72,29 @@
   },
 
   "light": {
+    "button": {
+      "state": {
+        "inverse": {
+          "purple": {
+            "text": "#5855F4",
+            "color": "#5855F4",
+            "border": "#5855F4",
+            "hoverText": "#fff",
+            "hover": "#6F6CFA",
+            "pressed": "#4B48F2"
+          },
+          "cyan": {
+            "text": "#001553",
+            "color": "#001553",
+            "border": "#2FD6D3",
+            "hoverText": "#fff",
+            "hover": "#02cccb",
+            "pressed": "#02b7ba"
+          }
+        }
+      }
+    },
+
     "bg": "#fff",
     "text": "#001553",
     "link": "#5855F4",

@@ -13,17 +13,33 @@ const theme = {
     },
     state: {
       inverse: {
-        purple: {
-          text: "#5855F4",
-          color: colors.white,
-          hover: "#6F6CFA",
-          pressed: "#4B48F2",
+        dark: {
+          purple: {
+            text: "#fff",
+            color: colors.white,
+            hover: "#6F6CFA",
+            pressed: "#4B48F2",
+          },
+          cyan: {
+            text: "#fff",
+            color: "#001553",
+            hover: "#02cccb",
+            pressed: "#02b7ba",
+          },
         },
-        cyan: {
-          text: "#2FD6D3",
-          color: "#001553",
-          hover: "#02cccb",
-          pressed: "#02b7ba",
+        light: {
+          purple: {
+            text: "#5855F4",
+            color: colors.white,
+            hover: "#6F6CFA",
+            pressed: "#4B48F2",
+          },
+          cyan: {
+            text: "#2FD6D3",
+            color: "#001553",
+            hover: "#02cccb",
+            pressed: "#02b7ba",
+          },
         },
       },
       white: {
@@ -70,10 +86,11 @@ const theme = {
 
 const get =
   (key) =>
-  ({ color, inverse }) =>
-    inverse
-      ? theme.button.state.inverse[color][key]
+  ({ color, inverse, theme: currentTheme }) => {
+    return inverse
+      ? currentTheme.button.state.inverse[color][key]
       : theme.button.state[color][key];
+  };
 
 const buttonStyle = ({ size = "large" }) => css`
   display: flex;
@@ -123,7 +140,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 599px) {
-    width: 288px;
+    width: 300px;
     height: 48px;
   }
 `;
@@ -166,10 +183,10 @@ export const InversedButton = styled.button`
   height: 56px;
   background-color: transparent;
   color: ${get("text")};
-  border: 2px solid ${get("text")};
+  border: 2px solid ${get("border")};
 
   :not(:disabled):hover {
-    color: ${get("hover")};
+    color: ${get("hoverText")};
     border-color: ${get("hover")};
   }
   :active {
@@ -179,7 +196,7 @@ export const InversedButton = styled.button`
 
   @media (max-width: 599px) {
     height: 48px;
-    width: 288px;
+    width: 300px;
   }
 `;
 

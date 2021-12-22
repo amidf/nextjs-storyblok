@@ -1529,6 +1529,14 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
+"@vimeo/player@^2.16.2":
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.16.2.tgz#f5f45af66579164f3807a6388eca672fdd12d873"
+  integrity sha512-7nXMZWyrmomX6eVQr7i4iEpKDpES6hnqR5D3dHNl+WZv8chYfdqCl+zVYUAwSZpbW4oL0C/lGlZW1hrC7fM7iQ==
+  dependencies:
+    native-promise-only "0.8.1"
+    weakmap-polyfill "2.0.4"
+
 acorn-jsx@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -3968,6 +3976,11 @@ nanoid@^3.1.23, nanoid@^3.1.30:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
   integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
 
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
+  integrity sha1-IKMYwwy0X3H+et+/eyHJnBRy7xE=
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -5456,6 +5469,11 @@ watchpack@2.1.1:
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
+
+weakmap-polyfill@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/weakmap-polyfill/-/weakmap-polyfill-2.0.4.tgz#bcc301e4c8eb4eda3e406f08f1a691093e407884"
+  integrity sha512-ZzxBf288iALJseijWelmECm/1x7ZwQn3sMYIkDr2VvZp7r6SEKuT8D0O9Wiq6L9Nl5mazrOMcmiZE/2NCenaxw==
 
 web-streams-polyfill@3.0.3:
   version "3.0.3"

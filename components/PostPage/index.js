@@ -35,6 +35,7 @@ const Wrap = styled.div`
 
 const PostPage = ({ blok }) => {
   const { locale } = useRouter();
+
   const thumbnailEl = useRef(null);
   const [isThumbnailLoaded, setIsThumbnailLoaded] = useState(false);
 
