@@ -10,13 +10,13 @@ const useHighlighter = () => {
     (async () => {
       const newHighlighter = await shiki.getHighlighter({
         theme: "/code-theme",
-        // langs: [
-        //   {
-        //     id: `dsl`,
-        //     scopeName: `source.dashaScriptingLanguage`,
-        //     grammar: dslGrammar,
-        //   },
-        // ],
+        langs: [
+          {
+            id: `dsl`,
+            scopeName: `source.dashaScriptingLanguage`,
+            grammar: dslGrammar,
+          },
+        ],
       });
 
       console.log({ newHighlighter });

@@ -2,7 +2,9 @@ import DynamicComponent from "../DynamicComponent";
 import Layout from "../Layout";
 import { sbEditable } from "@storyblok/storyblok-editable";
 
-const Page = ({ blok }) => {
+const Page = ({ blok, shiki }) => {
+  console.log({ shiki });
+
   return (
     <Layout>
       <main {...sbEditable(blok)} key={blok._uid}>

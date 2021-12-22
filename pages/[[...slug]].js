@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
+import * as shiki from "shiki";
+
 import DynamicComponent from "../components/DynamicComponent";
+import dslGrammar from "../utils/dslGrammar";
 
 import Storyblok, { useStoryblok } from "../utils/storyblok";
 
@@ -14,6 +17,28 @@ export default function Page({
   // use the preview variable to enable the bridge only in preview mode
   // const enableBridge = preview;
   story = useStoryblok(story, enableBridge, locale);
+  const [highlighter, setHighlighter] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const shikiTheme = shiki.loadTheme(`../utils/code-theme.json`);
+
+      const newHighlighter = await shiki.getHighlighter({
+        theme: shikiTheme,
+        langs: [
+          {
+            id: `dsl`,
+            scopeName: `source.dashaScriptingLanguage`,
+            grammar: dslGrammar,
+          },
+        ],
+      });
+
+      setHighlighter(newHighlighter);
+    })();
+  }, []);
+
+  console.log({ highlighter });
 
   return (
     <DynamicComponent

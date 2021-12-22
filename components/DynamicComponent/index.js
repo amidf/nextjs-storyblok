@@ -8,6 +8,9 @@ import Paragraph from "../Paragraph";
 import Row from "../Row";
 import LinkButton from "../LinkButton";
 import Video from "../Video";
+import FeatureSection from "../FeatureSection";
+import FeatureParagraph from "../FeatureParagraph";
+import CodeBlock from "../CodeBlock";
 
 const Components = {
   page: Page,
@@ -20,6 +23,9 @@ const Components = {
   "heading-3": Heading3,
   paragraph: Paragraph,
   video: Video,
+  "feature-section": FeatureSection,
+  "feature-paragraph": FeatureParagraph,
+  "code-block": CodeBlock,
 };
 
 const DynamicComponent = ({ blok }) => {
