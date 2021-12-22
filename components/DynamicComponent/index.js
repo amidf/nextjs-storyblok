@@ -1,5 +1,5 @@
-import Page from "./Page";
-import PostPage from "./PostPage";
+import Page from "../Page";
+import PostPage from "../PostPage";
 
 const Components = {
   page: Page,

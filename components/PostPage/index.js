@@ -3,7 +3,6 @@ import moment from "moment";
 import "moment/locale/ru";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 import Layout from "../Layout";
 import Introduction from "./components/Introduction";

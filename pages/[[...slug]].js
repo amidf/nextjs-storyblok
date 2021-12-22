@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import DynamicComponent from "../components/DynamicComponent";
 
 import Storyblok, { useStoryblok } from "../utils/storyblok";
@@ -15,8 +14,6 @@ export default function Page({
   // use the preview variable to enable the bridge only in preview mode
   // const enableBridge = preview;
   story = useStoryblok(story, enableBridge, locale);
-
-  console.log("slug page");
 
   return (
     <DynamicComponent

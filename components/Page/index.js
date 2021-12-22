@@ -1,5 +1,5 @@
-import DynamicComponent from "./DynamicComponent";
-import Layout from "./Layout";
+import DynamicComponent from "../DynamicComponent";
+import Layout from "../Layout";
 import { sbEditable } from "@storyblok/storyblok-editable";
 
 const Page = ({ blok }) => (
