@@ -34,6 +34,7 @@ const CodeTutorial = ({ files, highlights }) => {
       <S.Code
         source={file.body}
         inline={file.body}
+        isHighlighted={file.isHighlighted}
         highlights={getHighlights()}
       />
     </S.Container>

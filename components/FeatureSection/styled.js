@@ -8,20 +8,20 @@ export const Container = styled.div`
     margin-bottom: 0;
   }
 
-  > div:first-child {
+  > [data-component="feature-paragraph"] {
     max-width: 454px;
     min-width: 454px;
     flex-shrink: 0;
   }
 
-  > div:last-child {
+  > :not([data-component="feature-paragraph"]) {
     max-width: 664px;
     min-width: 664px;
     flex-shrink: 0;
   }
 
   @media (max-width: 1439px) {
-    > div:last-child {
+    > :not([data-component="feature-paragraph"]) {
       max-width: 616px;
       min-width: 616px;
     }
@@ -36,12 +36,12 @@ export const Container = styled.div`
     width: 100%;
     margin-bottom: 56px;
 
-    > div:first-child {
+    > [data-component="feature-paragraph"] {
       margin-bottom: 16px;
       max-width: 916px;
     }
 
-    > div:last-child {
+    > :not([data-component="feature-paragraph"]) {
       max-width: 100%;
       min-width: 100%;
     }
@@ -61,7 +61,7 @@ export const Container = styled.div`
     align-items: flex-start;
     margin-bottom: 48px;
 
-    > div:first-child {
+    > [data-component="feature-paragraph"] {
       width: 100%;
       min-width: 100%;
       margin-bottom: 8px;
@@ -71,11 +71,10 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     display: flex;
     justify-content: center;
-    flex-direction: ${(p) => (p.isLeft ? "row" : "row-reverse")};
     margin-bottom: 120px;
 
-    > div:first-child {
-      margin: ${(p) => (p.isLeft ? "0 48px 0 0" : "0 0 0 48px")};
+    > :first-child {
+      margin-right: 48px;
     }
   }
 `;

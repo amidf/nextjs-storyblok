@@ -1,10 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { Heading } from "../uikit/Typographic"
-import { Section as UISection } from "../uikit/Layout"
-import { FONT } from "src/developers/constants"
+import { FONT } from "../../constants";
 
-export const Section = styled(UISection)`
+export const Section = styled.div`
   width: 1200px;
   margin-bottom: 144px;
   padding-top: 0;
@@ -36,29 +34,17 @@ export const Section = styled(UISection)`
     margin-left: 12px;
     margin-right: 12px;
   }
-
-  ${Heading} {
-    margin-bottom: 64px;
-
-    @media (max-width: 1200px) {
-      margin-bottom: 24px;
-    }
-
-    @media (max-width: 599px) {
-      margin-bottom: 16px;
-    }
-  }
-`
+`;
 
 export const Tabs = styled.div`
   display: flex;
   background: #21254b;
   border-radius: 16px 16px 0px 0px;
-`
+`;
 
 export const Tab = styled.div`
   width: 50%;
-  background: ${p => (p.isActive ? "#2E3361" : "transparent")};
+  background: ${(p) => (p.isActive ? "#2E3361" : "transparent")};
   border-radius: 16px 16px 0px 0px;
   text-align: center !important;
   padding: 8px 0;
@@ -74,7 +60,7 @@ export const Tab = styled.div`
   svg {
     margin-right: 4px;
   }
-`
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -107,7 +93,7 @@ export const Container = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const TextBlock = styled.div`
   width: 534px;
@@ -184,7 +170,7 @@ export const TextBlock = styled.div`
       line-height: 24px;
     }
   }
-`
+`;
 
 export const CodeBlock = styled.div`
   width: 585px;
@@ -226,7 +212,7 @@ export const CodeBlock = styled.div`
       min-width: 100%;
     }
   }
-`
+`;
 
 export const ImgBlock = styled(CodeBlock)`
   display: flex;
@@ -240,4 +226,4 @@ export const ImgBlock = styled(CodeBlock)`
     border-radius: 16px;
     max-width: 100%;
   }
-`
+`;

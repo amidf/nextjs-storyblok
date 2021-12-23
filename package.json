@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splidejs/splide": "^3.6.9",
     "@storyblok/storyblok-editable": "^1.0.0",
     "@vimeo/player": "^2.16.2",
     "algoliasearch": "^4.11.0",

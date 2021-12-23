@@ -1320,6 +1320,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
+"@splidejs/splide@^3.6.9":
+  version "3.6.9"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-3.6.9.tgz#ee9041fb9f9bdc6a8fd06fa47536f76769b252a0"
+  integrity sha512-uQXmn0NUrlOhBCYJ8Qy4ZbCOu/fY7nTkEQUIjoKpuY10UJu1pddHquI/pmMCh/oIjhxDQFVd7TnDMq5m7JDdZA==
+
 "@storyblok/storyblok-editable@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@storyblok/storyblok-editable/-/storyblok-editable-1.0.0.tgz#7951d57a3c3ce2e89681299fe015bdd9c9f25b09"

@@ -5,7 +5,11 @@ import ArrowIcon from "./assets/arrow.svg";
 
 const FeatureParagraph = ({ blok }) => {
   return (
-    <S.Container {...sbEditable(blok)} key={blok._uid}>
+    <S.Container
+      data-component={blok.component}
+      {...sbEditable(blok)}
+      key={blok._uid}
+    >
       <S.Caption>{blok.caption}</S.Caption>
       <S.Title>{blok.title}</S.Title>
       <S.Text>{blok.text}</S.Text>

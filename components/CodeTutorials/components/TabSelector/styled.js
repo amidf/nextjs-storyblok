@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components"
+import styled, { css } from "styled-components";
 
-import { FONT } from "src/developers/constants"
+import { FONT } from "../../../../constants";
 
 export const Container = styled.div`
   display: flex;
@@ -15,29 +15,28 @@ export const Container = styled.div`
 
     margin-bottom: 8px;
   }
-`
+`;
 
 const hiddenStyle = css`
   opacity: 0;
   visibility: hidden;
   height: 1px;
   overflow: hidden;
-`
+`;
 
 export const List = styled.ul`
   list-style: none;
 
   display: flex;
   align-items: center;
-  ${props => props.hidden && hiddenStyle}
+  ${(props) => props.hidden && hiddenStyle}
 
-  
-  width: ${p => (p.isScroll ? "calc(100% - 90px)" : "calc(100% - 40px)")};
-  margin: ${p => (p.isScroll ? "0 10px" : "0 10px ")};;
+  width: ${(p) => (p.isScroll ? "calc(100% - 90px)" : "calc(100% - 40px)")};
+  margin: ${(p) => (p.isScroll ? "0 10px" : "0 10px ")};
 
   overflow-x: hidden;
   padding: 0;
-`
+`;
 
 export const ListItem = styled.li`
   display: flex;
@@ -51,7 +50,7 @@ export const ListItem = styled.li`
 
   ::after {
     content: "";
-    opacity: ${props => (props.active ? 1 : 0)};
+    opacity: ${(props) => (props.active ? 1 : 0)};
     transition: 0.3s;
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 1px 4px rgba(64, 70, 125, 0.3);
@@ -78,9 +77,9 @@ export const ListItem = styled.li`
     font-weight: 600;
     font-size: 15px;
     line-height: 28px;
-    color: ${props => (props.active ? "#fff" : "#a1a1bd")};
+    color: ${(props) => (props.active ? "#fff" : "#a1a1bd")};
   }
-`
+`;
 
 export const ItemOption = styled.div`
   width: 100%;
@@ -103,7 +102,7 @@ export const ItemOption = styled.div`
     width: 24px;
     height: 24px;
   }
-`
+`;
 
 export const NavBtn = styled.button`
   width: 24px;
@@ -119,7 +118,7 @@ export const NavBtn = styled.button`
     width: 24px;
     height: 24px;
   }
-`
+`;
 
 export const ModalMenu = styled.div`
   position: fixed;
@@ -148,10 +147,10 @@ export const ModalMenu = styled.div`
     color: #001553;
     padding: 8px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 
     :hover {
       background: #14247047;
     }
   }
-`
+`;

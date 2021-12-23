@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
-import * as shiki from "shiki";
+import React, { useContext } from "react";
 
 import DynamicComponent from "../components/DynamicComponent";
-import dslGrammar from "../utils/dslGrammar";
-
+import ShikiContext from "../shiki/context";
+import useShiki from "../shiki/useShiki";
 import Storyblok, { useStoryblok } from "../utils/storyblok";
 
 export default function Page({
@@ -17,36 +16,17 @@ export default function Page({
   // use the preview variable to enable the bridge only in preview mode
   // const enableBridge = preview;
   story = useStoryblok(story, enableBridge, locale);
-  const [highlighter, setHighlighter] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      const shikiTheme = shiki.loadTheme(`../utils/code-theme.json`);
-
-      const newHighlighter = await shiki.getHighlighter({
-        theme: shikiTheme,
-        langs: [
-          {
-            id: `dsl`,
-            scopeName: `source.dashaScriptingLanguage`,
-            grammar: dslGrammar,
-          },
-        ],
-      });
-
-      setHighlighter(newHighlighter);
-    })();
-  }, []);
-
-  console.log({ highlighter });
+  const shiki = useShiki();
 
   return (
-    <DynamicComponent
-      blok={story.content}
-      locale={locale}
-      locales={locales}
-      defaultLocale={defaultLocale}
-    />
+    <ShikiContext.Provider value={shiki}>
+      <DynamicComponent
+        blok={story.content}
+        locale={locale}
+        locales={locales}
+        defaultLocale={defaultLocale}
+      />
+    </ShikiContext.Provider>
   );
 }
 

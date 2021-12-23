@@ -18,9 +18,6 @@ export const Caption = styled.h3`
   text-align: left;
   margin: 0;
 
-  @media (max-width: 600px) {
-  }
-
   @media (max-width: 1199px) {
     margin-bottom: 16px;
   }
